@@ -3,7 +3,7 @@
 import {Routes, BrowserRouter, Route} from "react-router-dom";
 import Home from "./Home";
 import AddEditRecipe from "./AddEditRecipe";
-import Blog from "./Blog";
+import Recipe from "./Recipe";
 import About from "./About";
 import NotFound from "./NotFound"
 
@@ -19,14 +19,14 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Header />
-      <ToastContainer/>
+     <ToastContainer/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/addBlog" element={<AddEditRecipe />} />
-          <Route path="/editBlog/:id" element={<AddEditRecipe />} />
-          <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/addRecipe" element={<AddEditRecipe />} />
+          <Route path="/editRecipe/:id" element={<AddEditRecipe />} />
+          <Route path="/recipes/:id" element={<Recipe />} />
           <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
+         
         </Routes>
       </div>
     </BrowserRouter>

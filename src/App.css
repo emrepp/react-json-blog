@@ -15,7 +15,9 @@ align-items: center;
   color: white;
 }
 
-
+.site-title {
+  font-size: 2rem;
+}
 
 
 .App-header ul {
