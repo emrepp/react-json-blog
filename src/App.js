@@ -1,29 +1,37 @@
 
-import './App.css';
+
 import {Routes, BrowserRouter, Route} from "react-router-dom";
-import Home from "./pages/Home";
-import AddEditBlog from ".pages/AddEditBlog";
-import Blog from ".pages/Blog";
-import About from ".pages/About";
+import Home from "./Home";
+import AddEditBlog from "./AddEditBlog";
+import Blog from "./Blog";
+import About from "./About";
+import NotFound from "./NotFound"
+
+import Header from "./Header";
+import './App.css';
+
 
 
 
 function App() {
   return (
     <BrowserRouter>
-     <div className="App">
-      <Routes>
-        <Route path="/" element = {<Home />} />
-        <Route path="/addBlog" element = {<AddEditBlog />} />
-        <Route path="/Blog/:id" element = {<Blog />} />
-        <Route path="/about" element = {<About />} />
-        <Route path="*" element={<NotFound/>}/>
-
-      </Routes>
-    </div>
+      <div className="App">
+        <Header />
+      
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/addBlog" element={<AddEditBlog />} />
+          <Route path="/editBlog/:id" element={<AddEditBlog />} />
+          <Route path="/blog/:id" element={<Blog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </BrowserRouter>
-   
   );
 }
 
 export default App;
+
+
