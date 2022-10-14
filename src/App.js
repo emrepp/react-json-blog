@@ -12,13 +12,14 @@ import './App.css';
 
 
 
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
-      
+      <ToastContainer/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/addBlog" element={<AddEditBlog />} />
