@@ -2,7 +2,7 @@
 
 import {Routes, BrowserRouter, Route} from "react-router-dom";
 import Home from "./Home";
-import AddEditBlog from "./AddEditBlog";
+import AddEditRecipe from "./AddEditRecipe";
 import Blog from "./Blog";
 import About from "./About";
 import NotFound from "./NotFound"
@@ -22,8 +22,8 @@ function App() {
       <ToastContainer/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/addBlog" element={<AddEditBlog />} />
-          <Route path="/editBlog/:id" element={<AddEditBlog />} />
+          <Route path="/addBlog" element={<AddEditRecipe />} />
+          <Route path="/editBlog/:id" element={<AddEditRecipe />} />
           <Route path="/blog/:id" element={<Blog />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
